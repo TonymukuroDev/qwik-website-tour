@@ -1,0 +1,57 @@
+@use './../../../../styles/variables' as *;
+@use './../../../../styles/mixins' as *;
+@use './../../../../styles/responsive' as *;
+
+
+.services {
+    padding: 8rem 0;
+
+    &__grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 2rem;
+
+        @include respond(big-desktop) {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    .service-card {
+        background: $surface;
+        border: 1px solid $border;
+        border-radius: 20px;
+        padding: 2.5rem;
+        text-align: center;
+        transition: all 0.4s ease;
+
+        &:hover {
+            border-color: $accent;
+            transform: translateY(-5px);
+        }
+
+        .service-icon {
+            @include size(70px);
+            background: linear-gradient(135deg, rgba(201, 168, 76, 0.1), rgba(201, 168, 76, 0.05));
+            border-radius: 16px;
+            @include flex-center();
+            font-size: 2rem;
+            margin: 0 auto 1.5rem;
+            border: 1px solid rgba(201, 168, 76, 0.2);
+        }
+
+        h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.75rem;
+        }
+
+        p {
+            color: $text-secondary;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+    }
+}
