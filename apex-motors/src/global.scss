@@ -203,3 +203,13 @@ h1, h2, h3, h4, h5, h6 {
     0% { background-position: -1000px 0; }
     100% { background-position: 1000px 0; }
 }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.5; transform: translateY(-50%) scale(1); }
+    50% { opacity: 1; transform: translateY(-50%) scale(1.1); }
+}

@@ -10,7 +10,7 @@ const Footer = component$(() => {
                     <div class="footer__brand">
                         <Link href="/" class="logo">
                             <span class="logo-icon">A</span>
-                            Apex motors
+                            Apex Motors
                         </Link>
                         <p>Premium automotive retail since 2008. We curate the world's finest vehicles and deliver an unmatched buying experience.</p>
                         <div class="footer__social">
@@ -39,6 +39,7 @@ const Footer = component$(() => {
                         </ul>
                     </div>
                     <div class="footer__links">
+                        <h4>Company</h4>
                         <ul>
                             <li><Link href="/contact">About Us</Link></li>
                             <li><Link href="/contact">Careers</Link></li>
