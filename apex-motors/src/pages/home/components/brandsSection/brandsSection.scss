@@ -1,0 +1,35 @@
+@use "./../../../../styles/variables" as *;
+
+.brands {
+    padding: 6rem 0;
+    background: $secondary;
+    border-top: 1px solid $border;
+    border-bottom: 1px solid $border;
+
+    &__scroll {
+        display: flex;
+        gap: 4rem;
+        overflow: auto;
+        padding: 2rem 0;
+        scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+        .brand-item {
+            flex-shrink: 0;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: $text-muted;
+            cursor: pointer;
+            white-space: nowrap;
+            transition: all 0.3s ease;
+
+            &:hover {
+                color: $accent;
+                transform: scale(1.1);
+            }
+        }
+    }
+}
