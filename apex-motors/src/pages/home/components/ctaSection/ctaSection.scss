@@ -1,0 +1,43 @@
+@use './../../../../styles/variables' as *;
+@use './../../../../styles/mixins' as *;
+@use './../../../../styles/responsive' as *;
+
+
+.cta-section {
+    padding: 8rem 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: radial-gradient(ellipse at center, rgba(201, 168, 76, 0.1) 0%, transparent 70%);
+    }
+
+    h2 {
+        font-size: 3.5rem;
+        margin-bottom: 1.5rem;
+        position: relative;
+
+        @include respond(tab-port) {
+            font-size: 2rem;
+        }
+    }
+
+    p {
+        color: $text-secondary;
+        font-size: 1.2rem;
+        max-width: 600px;
+        margin: 0 auto 2.5rem;
+        position: relative;
+    }
+
+    .btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+}
