@@ -1,9 +1,10 @@
 import { component$ } from "@builder.io/qwik";
 import './servicesSection.scss';
 import ServiceCard from "./service-card";
+import { useElementReveal } from "~/hooks/elementReveal.hook";
 
 const ServicesSection = component$(() => {
-
+    const [elementRef, isVisible] = useElementReveal();
     const serviceCards = [
         {
             icon: "🔍",
@@ -34,7 +35,10 @@ const ServicesSection = component$(() => {
                     <h2>Why choose <span class="gold-text">Apex</span></h2>
                     <p>Comprehensive automotive services tailored to your needs</p>
                 </div>
-                <div class="services__grid">
+                <div ref={(el) => elementRef.value = el } class={[
+                    "services__grid",
+                    isVisible.value ? "grid--visible" : "grid--hidden"
+                    ]}>
                     {
                         serviceCards.map(({icon, title, description}) => (
                             <ServiceCard

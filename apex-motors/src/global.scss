@@ -43,6 +43,16 @@ h1, h2, h3, h4, h5, h6 {
     letter-spacing: -0.02em;
 }
 
+.grid--hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.grid--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .gold-text {
     background: var(--gradient-gold);
     --webkit-background-clip: text;

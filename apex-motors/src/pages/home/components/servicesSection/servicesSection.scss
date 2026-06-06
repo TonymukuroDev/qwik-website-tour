@@ -10,6 +10,7 @@
         display: grid;
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
+        transition: all 0.6s ease;
 
         @include respond(big-desktop) {
             grid-template-columns: repeat(2, 1fr);
