@@ -1,0 +1,48 @@
+@use './../../styles/variables' as *;
+@use './../../styles/mixins' as *;
+@use './../../styles/responsive' as *;
+
+.footer {
+   padding: 4rem 2rem 2rem;
+   border-top: 1px solid rgba(201, 162, 39, 0.1);
+   text-align: center;
+   
+    &__crest {
+        font: {
+            family: 'Cormorant Garamond', serif;
+            size: 2rem;
+        };
+        color: $imperial-gold;
+        margin-bottom: 2rem;
+    }
+
+    &__info {
+        display: flex;
+        justify-content: center;
+        gap: 4rem;
+        margin-bottom: 3rem;
+        flex-wrap: wrap;
+    }
+
+    &__col {
+        h4 {
+            color: $imperial-gold;
+            font-size: 0.75rem;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: rgba(245, 240, 232, 0.5);
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+    }
+
+    .copyright {
+        color: rgba(245, 240, 232, 0.3);
+        font-size: 0.8rem;
+        letter-spacing: 0.1rem;
+    }
+}
