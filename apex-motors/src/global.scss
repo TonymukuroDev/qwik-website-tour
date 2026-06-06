@@ -60,6 +60,33 @@ h1, h2, h3, h4, h5, h6 {
     background-clip: text;
 }
 
+.badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.badge-new {
+    background: var(--success);
+    color: white;
+}
+
+.badge-certified {
+    background: var(--accent);
+    color: var(--primary);
+}
+
+.badge-sale {
+    background: var(--danger);
+    color: white;
+}
+
 .btn {
     display: inline-flex;
     align-items: center;

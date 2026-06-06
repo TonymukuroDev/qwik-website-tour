@@ -1,7 +1,9 @@
-import menuBtnIcon from './menu-btn.svg';
-import closeBtnIcon from './close-btn.svg';
+import menuBtnIcon from './icons/menu-btn.svg';
+import closeBtnIcon from './icons/close-btn.svg';
 
-
+import bmwImg from './imgs/bmw-x5.jpg';
+import mercedesImg from './imgs/mercedes-benz-GLE.jpg';
+import porscheImg from './imgs/porsche-911.jpg';
 
 
 export const assetsIcon = {
@@ -13,4 +15,10 @@ export const assetsIcon = {
         icon: closeBtnIcon,
         title: 'close btn'
     }
+}
+
+export const assetsImg = {
+    bmw: bmwImg,
+    mercedes: mercedesImg,
+    porsche: porscheImg,
 }
