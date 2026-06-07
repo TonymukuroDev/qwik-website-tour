@@ -23,6 +23,59 @@ body {
     overflow-x: hidden;
 }
 
+.btn {
+    padding: 1rem 2.5rem;
+    border: 1px solid var(--imperial-gold);
+    background: transparent;
+    color: var(--imperial-gold);
+    font: {
+        family: 'Montserrat', sans-serif;
+        size: 0.85rem;
+    };
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: -100%;
+        width: 100%;
+        height: 100%;
+        background: var(--imperial-gold);
+        z-index: -1;
+        transition: left 0.4s ease;
+    }
+
+    &:hover {
+        color: var(--night-black);
+
+        &::before {
+            left: 0;
+        }
+    }
+
+    &-primary {
+        background: var(--imperial-gold);
+        color: var(--night-black);
+
+        &:hover {
+            background: transparent;
+            color: var(--imperial-gold);
+        }
+
+        &::before {
+            background: var(--night-black);
+        }
+    }
+}
+
+// ANIMATIONS
 @keyframes bounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
     50% { transform: translateX(-50%) translateY(10px); }

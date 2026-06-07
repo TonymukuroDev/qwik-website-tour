@@ -1,0 +1,56 @@
+@use './../../../../styles/variables' as *;
+@use './../../../../styles/mixins' as *;
+@use './../../../../styles/responsive' as *;
+
+
+.philosophy {
+    padding: 8rem 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+
+    @include respond(tab-port) {
+        grid-template-columns: 1fr;
+    }
+
+
+    &__text {
+        h2 {
+            font: {
+                family: 'Cormorant Garamond', serif;
+                size: 2.5rem;
+                weight: 300;
+            };
+            margin-bottom: 1.5rem;
+            color: $imperial-gold;
+        }
+
+        p {
+            line-height: 1.8;
+            color: rgba(245, 240, 232, 0.7);
+            font-weight: 300;
+        }
+    }
+
+    &__image {
+        position: relative;
+        height: 500px;
+        overflow: hidden;
+
+        img {
+            @include size(100%);
+            object-fit: cover;
+            filter: sepia(0.3) contrast(1.1);
+        }
+
+        .image-frame {
+            position: absolute;
+            inset: 20px;
+            border: 1px solid $imperial-gold;
+            pointer-events: none;
+        } 
+    }
+}
