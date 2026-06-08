@@ -3,27 +3,7 @@ import './philosophySection.scss';
 import { assetsImg } from "~/assets/assets";
 
 const PhilosophySection = component$(() => {
-    const menuDishes = [
-        {
-            name: "Beef Stroganoff",
-            description: "Heritage beef tenderloin, wild mushroom cream, buckwheat kasha",
-            imageUrl: assetsImg.beefStroganoff.img,
-            imageAltText: assetsImg.beefStroganoff.title
-        },
-        {
-            name: "Siberian Pelmeni",
-            description: "Hand-folded dumplings, veal & pork, sour cream, dill butter",
-            imageUrl: assetsImg.siberianDumpling.img,
-            imageAltText: assetsImg.siberianDumpling.title
-        },
-        {
-            name: "Ukrainian Borscht",
-            description: "Heritage beets, beef bone broth, pampushka garlic bread",
-            imageUrl: assetsImg.ukranianBorshch.img,
-            imageAltText: assetsImg.ukranianBorshch.title
-        }
-    ];
-
+    
     return (
         <section class="philosophy">
             <div class="philosophy__text">

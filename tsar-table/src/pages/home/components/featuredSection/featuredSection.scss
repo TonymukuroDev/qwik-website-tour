@@ -1,0 +1,90 @@
+@use './../../../../styles/variables' as *;
+@use './../../../../styles/mixins' as *;
+@use './../../../../styles/responsive' as *;
+
+
+.featured {
+    padding: 6rem 2rem;
+    background: linear-gradient(180deg, $night-black 0%, #111 100%);
+
+    .section-header {
+        text-align: center;
+        margin-bottom: 4rem;
+
+        h2 {
+            font: {
+                family: 'Cormorant Garamond', serif;
+                size: 2rem;
+                weight: 300;
+            };
+            color: $imperial-gold;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+        }
+    }
+
+    .dishes-grid {
+        max-width: 1200px;
+        margin: 0 auto;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+        }
+    }
+
+}
+
+.dish-card {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+        @include size(100%, 350px);
+        object-fit: cover;
+        transition: transform 0.6s ease;
+    }
+
+    img:hover {
+        transform: scale(1.05);
+    }
+
+    .dish-info {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        padding: 2rem;
+        background: linear-gradient(to top, rgba(10, 10, 10, 0.95), transparent);
+        transform: translateY(20px);
+        opacity: 0;
+        transition: all 0.4s ease;
+
+        @include respond(tab-port) {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        h3 {
+            font: {
+                family: 'Cormorant Garamond', serif;
+                size: 1.5rem;
+            };
+            color: $imperial-gold;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            font-size: 0.85rem;
+            color: rgba(245, 240, 232, 0.7);
+        }
+    }
+
+    &:hover .dish-info {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
