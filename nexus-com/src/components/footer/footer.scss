@@ -1,0 +1,97 @@
+@use './../../styles/variables' as *;
+@use './../../styles/mixins' as *;
+@use './../../styles/responsive' as *;
+
+.footer {
+    padding: 4rem 5% 2rem;
+    border-top: 1px solid $glass-border;
+
+
+    &__grid {
+        display: grid;
+        grid-template-columns: 2fr repeat(3, 1fr);
+        gap: 3rem;
+        max-width: 1200px;
+        margin: 0 auto;
+
+        @include respond(tab-port) {
+            grid-template-columns: 1fr;
+        }
+    } 
+
+    &__brand {
+        .logo {
+            margin-bottom: 1rem;
+        }
+
+        p {
+            color: #64748b;
+            line-height: 1.6;
+        }
+    }
+
+    &__links {
+
+        h4 {
+            font-size: 1rem;
+            margin-bottom: 1.5rem;
+            color: $light;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        li {
+            margin-bottom: 0.8rem;
+        }
+
+        a {
+            color: #64748b;
+            text-decoration: none;
+            transition: color 0.3s;
+
+            &:hover {
+                color: $primary;
+            }
+        }
+    }
+
+    &__bottom {
+        max-width: 1200px;
+        margin: 3rem auto 0;
+        padding-top: 2rem;
+        border-top: 1px solid $glass-border;
+        @include flex-between();
+        color: #64748b;
+        font-size: 0.9rem;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+            gap: 1rem;
+            text-align: center;
+        }
+    }
+
+    .social-links {
+        display: flex;
+        gap: 1rem;
+
+        a {
+            @include size(40px);
+            border-radius: 50%;
+            background: $glass;
+            border: 1px solid $glass-border;
+            @include flex-center();
+            color: $light;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        a:hover {
+            background: $primary;
+            border-color: $primary;
+            transform: translateY(-3px);
+        }
+    }
+}
