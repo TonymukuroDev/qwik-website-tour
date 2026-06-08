@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after { 
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+:root {
+    --primary: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary: #06b6d4;
+    --accent: #f59e0b;
+    --dark: #0f172a;
+    --darker: #020617;
+    --light: #f8fafc;
+    --glass: rgba(255,255,255,0.05);
+    --glass-border: rgba(255,255,255,0.1);
+}
+
+html { scroll-behavior: smooth; }
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background: var(--darker);
+    color: var(--light);
+    overflow-x: hidden;
+}
