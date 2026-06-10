@@ -1,0 +1,125 @@
+@use './../../../../styles/variables' as *;
+@use './../../../../styles/mixins' as *;
+@use './../../../../styles/responsive' as *;
+
+.contact {
+    &__form-section {
+        padding: 4rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+
+        @include respond(tab-port) {
+            padding: 2rem;
+        }
+
+        h2 {
+            font: {
+                family: 'Cormorant Garamond', serif;
+                size: 2rem;
+                weight: 300; 
+            };
+            color: $imperial-gold;
+            margin-bottom: 0.5rem;
+        }
+
+        p {
+            color: rgba(245, 240, 232, 0.5);
+            margin-bottom: 2rem;
+            font-size: 0.9rem;
+        }
+    }
+}
+
+.form {
+    &__group {
+        position: relative;
+        margin-bottom: 1.5rem;
+
+        input,
+        textarea,
+        select {
+            width: 100%;
+            padding: 1.2rem 1rem 0.8rem;
+            background: rgba(245, 240, 232, 0.03);
+            border: 1px solid rgba(245, 240, 232, 0.1);
+            color: $warm-white;
+            font: {
+                family: 'Montserrat', sans-serif;
+                size: 0.9rem;
+            };
+            transition: all 0.3s;
+        }
+
+        textarea {
+            min-height: 120px;
+            resize: vertical;
+        }
+
+        label {
+            position: absolute;
+            left: 1rem;
+            top: 1rem;
+            color: rgba(245, 240, 232, 0.4);
+            font-size: 0.9rem;
+            pointer-events: none;
+            transition: all 0.3s;
+        }
+
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: $imperial-gold;
+            background: rgba(201, 162, 39, 0.03);
+        }
+
+        input:focus + label,
+        input:not(:placeholder-shown) + label,
+        textarea:focus + label,
+        textarea:not(:placeholder-shown) + label,
+        select:focus + label,
+        select:valid + label {
+            top: 0.3rem;
+            font-size: 0.7rem;
+            color: $imperial-gold;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        select {
+            appearance: none;
+            cursor: pointer;
+
+            option {
+                background: $night-black;
+                color: $warm-white;
+            }
+        }
+
+    }
+
+    .submit-btn {
+        width: 100%;
+        padding: 1.2rem;
+        background: $imperial-gold;
+        border: 1px solid $imperial-gold;
+        color: $night-black;
+        font: {
+            family: 'Montserrat', sans-serif;
+            size: 0.85rem;
+            weight: 500;
+        };
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 0.4s;
+
+        &:hover {
+            background: transparent;
+            color: $imperial-gold;
+        }
+    }
+
+
+}

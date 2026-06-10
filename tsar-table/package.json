@@ -26,6 +26,7 @@
     "@builder.io/qwik": "^1.20.0",
     "@builder.io/qwik-city": "^1.20.0",
     "@eslint/js": "^9",
+    "@modular-forms/qwik": "^0.29.1",
     "@types/node": "20.19.0",
     "eslint": "9.32.0",
     "eslint-plugin-qwik": "^1.20.0",
@@ -38,5 +39,8 @@
     "undici": "*",
     "vite": "7.3.1",
     "vite-tsconfig-paths": "^4.2.1"
+  },
+  "dependencies": {
+    "valibot": "^1.4.1"
   }
 }

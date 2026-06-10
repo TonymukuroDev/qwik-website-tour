@@ -2,8 +2,10 @@ import { component$ } from "@builder.io/qwik";
 import { assetsImg } from "~/assets/assets";
 import DishCard from "./dishCard";
 import './featuredSection.scss';
+import { useElementReveal } from "~/hooks/elementReveal.hook";
 
 const FeaturedSection = component$(() => {
+    const [elementRef, isVisible] = useElementReveal();
     const menuDishes = [
         {
             name: "Beef Stroganoff",
@@ -29,7 +31,10 @@ const FeaturedSection = component$(() => {
             <div class="section-header">
                 <h2>Imperial Selections</h2>
             </div>
-            <div class="dishes-grid">
+            <div class={[
+                "dishes-grid",
+                isVisible.value ? "grid--visible" : "grid--hidden"
+                ]} ref={(el) => elementRef.value = el}>
                 {
                     menuDishes.map((dish) => (
                         <DishCard

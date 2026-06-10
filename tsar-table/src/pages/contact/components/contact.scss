@@ -1,0 +1,66 @@
+@use './../../../styles/variables' as *;
+@use './../../../styles/mixins' as *;
+
+.contact {
+    &__hero {
+        height: 40vh;
+        @include flex-center();
+        position: relative;
+        margin-top: 60px;
+        background: linear-gradient(
+            135deg,
+            #0f0f0f 0%,
+            #1a1a1a 100%
+        );
+
+        h1 {
+            font: {
+                family: 'Cormorant Garamond', serif;
+                size: 3rem;
+                weight: 300;
+            };
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: $imperial-gold;
+        }
+    }
+}
+
+.social {
+    padding: 4rem;
+    text-align: center;
+    border-top: 1px solid rgba(201, 162, 39, 0.1);
+
+    h3 {
+        font: {
+            family: 'Cormorant Garamond', serif;
+            size: 1.5rem;
+            weight: 300;
+        };
+        color: $imperial-gold;
+        margin-bottom: 1.5rem;
+    }
+
+    &__links {
+        display: flex;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    &__link {
+        @include size(50px);
+        border: 1px solid rgba(201, 162, 39, 0.3);
+        border-radius: 50%;
+        @include flex-center();
+        color: $imperial-gold;
+        text-decoration: none;
+        font-size: 1.2rem;
+        transition: all 0.3s;
+
+        &:hover {
+            background: $imperial-gold;
+            color: $night-black;
+            border-color: $imperial-gold;
+        }
+    }
+}

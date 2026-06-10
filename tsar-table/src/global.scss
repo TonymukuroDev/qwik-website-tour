@@ -75,6 +75,16 @@ body {
     }
 }
 
+.grid--visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.grid--hidden {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
 // ANIMATIONS
 @keyframes bounce {
     0%, 100% { transform: translateX(-50%) translateY(0); }
