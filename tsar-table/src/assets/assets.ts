@@ -5,7 +5,7 @@ import ukranianBorshchImg from './imgs/ukranian_borshch.jpg';
 import btnCloseIcon from './icons/btn-close.svg';
 import btnMenuIcon from './icons/btn-menu.svg';
 import imperialExperienceImg from './imgs/imperial_experience.jpg';
-
+import chefVolkovImg from './imgs/chef_volkov.jpg';
 
 export const assetsIcon = {
     btnClose: {
@@ -38,6 +38,10 @@ export const assetsImg = {
     imperialExperience: {
         img: imperialExperienceImg,
         title: 'imperial experience'
+    },
+    chefVolkov: {
+        img: chefVolkovImg,
+        title: 'chef volkov'
     }
 
 }

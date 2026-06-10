@@ -1,0 +1,32 @@
+@use './../../../../styles/variables' as *;
+@use './../../../../styles/mixins' as *;
+@use './../../../../styles/responsive' as *;
+
+.story-section {
+    padding: 6rem 3rem;
+    max-width: 1000px;
+    margin: 0 auto;
+
+    h2 {
+        font: {
+            family: 'Cormorant Garamond', serif;
+            size: 2.5rem;
+            weight: 300;
+        };
+        color: $imperial-gold;
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+
+    p {
+        line-height: 1.8;
+        color: rgb(245, 240, 232, 0.7);
+        text-align: center;
+        max-width: 700px;
+        margin: 0 auto 1.5rem;
+        font: {
+            size: 1.05rem;
+            weight: 300; 
+        };
+    }
+}
