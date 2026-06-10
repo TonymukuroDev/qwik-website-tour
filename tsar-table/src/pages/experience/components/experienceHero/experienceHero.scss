@@ -1,0 +1,56 @@
+@use './../../../../styles/variables' as *;
+@use './../../../../styles/mixins' as *;
+@use './../../../../styles/responsive' as *;
+
+.experience-hero {
+    height: 70vh;
+    @include flex-center();
+    position: relative;
+    overflow: hidden;
+    margin-top: 60px;
+
+    @include respond(tab-port) {
+        height: 50vh;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background: url('/src/assets/imgs/imperial_experience.jpg') center/cover;
+        opacity: 0.2;
+        filter: sepia(0.6);
+    }
+
+    &__content {
+        position: relative;
+        text-align: center;
+        z-index: 2;
+    }
+
+    h1 {
+        font: {
+            size: 3.5rem;
+            family: 'Cormorant Garamond', serif;
+            weight: 300;
+        };
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        color: $imperial-gold;
+        margin-bottom: 1rem;
+
+        @include respond(tab-port) {
+            font-size: 2.5rem;
+        }
+    }
+
+    p {
+        font: {
+            size: 1rem;
+            weight: 300; 
+        };
+        text-transform: uppercase;
+        color: rgba(245, 240, 232, 0.6);
+        letter-spacing: 0.2em;
+    }
+}

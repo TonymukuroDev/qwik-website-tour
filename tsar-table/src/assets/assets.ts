@@ -4,6 +4,7 @@ import siberianDumplingImg from './imgs/siberian_dumpling.jpg';
 import ukranianBorshchImg from './imgs/ukranian_borshch.jpg';
 import btnCloseIcon from './icons/btn-close.svg';
 import btnMenuIcon from './icons/btn-menu.svg';
+import imperialExperienceImg from './imgs/imperial_experience.jpg';
 
 
 export const assetsIcon = {
@@ -33,6 +34,10 @@ export const assetsImg = {
     siberianDumpling: {
         img: siberianDumplingImg,
         title: 'Siberian dumpling'
+    },
+    imperialExperience: {
+        img: imperialExperienceImg,
+        title: 'imperial experience'
     }
 
 }
